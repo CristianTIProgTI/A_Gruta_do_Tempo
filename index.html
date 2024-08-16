@@ -12,9 +12,9 @@
 </head>
 <body>
   
-  <audio id="musicPast" src="music\RPG Lost in the Past (Echoes of Desolation).mp3"></audio>
-  <audio id="musicGameOver" src="music\GAME OVER (Eclipse of Hope).mp3"></audio>
-  <audio id="musicVictory" src="music\RPG victory (1).mp3"></audio>
+  <audio class="musicPast" src="music\RPG Lost in the Past (Echoes of Desolation).mp3"></audio>
+  <audio class="musicGameOver" src="music\GAME OVER (Eclipse of Hope).mp3"></audio>
+  <audio class="musicVictory" src="music\RPG victory (1).mp3"></audio>
 
   <div class="container">
     <header class="d-flex justify-content-center py-3">
@@ -480,15 +480,15 @@
             </div>
             <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
                 <div class="mb-2">
-                  <a href="#14" class="w-100 d-block play-music">
+                  <a href="#14" class="w-100 d-block play-music" data-music-class="musicPast">
                       <button type="button" class="btn btn-lg btn-secondary w-100">
                         Se você montar no cavalo e fugir, vá para a página 14.
                       </button>
                   </a>
                 </div>
                 <div>
-                  <a href="#15" class="w-100 d-block">                  
-                    <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-dismiss="modal">
+                  <a href="#15" class="w-100 d-block play-music" data-music-class="musicPast">                  
+                    <button type="button" class="btn btn-lg btn-secondary w-100" >
                       Se você pedir refúgio ao Rei, vá para a página 15.
                     </button>
                   </a>
@@ -523,7 +523,7 @@
                 </div>
                 <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
                     <div class="mb-2">
-                        <a href="#" class="w-100 d-block">
+                        <a href="#" class="w-100 d-block stop-music">
                             <button type="button" class="btn btn-lg btn-secondary w-100">
                                 Voltar para o início.
                             </button>
@@ -533,6 +533,41 @@
             </div>
         </div>
     </div>
+
+    <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet">
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content rounded-4 shadow custom-shadow">
+              <div class="modal-header border-bottom-0 d-flex justify-content-center">
+                  <h1 id="15" class="modal-title fs-5">15</h1>
+              </div>
+              <div class="modal-body py-0">
+                  <p>Você encontra o Rei e agradece a ele por deixá-lo sair da torre.</p>
+                  <p>"Não pense nisso", o Rei responde. "Nós faríamos o mesmo por qualquer vilão. Gostamos do seu espírito e, embora sua história faça tanto sentido quanto uma mula dançante, ela trouxe risos aos nossos olhos. Você, sem querer, temos certeza, prestou um serviço ao seu Rei. Nós agradecemos.</p>
+                  <p>"Nós providenciaremos para que você tenha um cavalo e algumas peças de ouro", o Rei continua. "Vá e faça sua fortuna. Nós ordenamos que você — venha uma vez por ano e nos conte uma história não menos divertida do que a que ouvimos de seus lábios."</p>
+                  <p>"Meu senhor", você diz.</p>
+                  <p>"Meu excelente vassalo", ele responde.</p>
+                  <p>Você parte, um tanto apreensivo, mas decidido a aproveitar ao máximo sua vida no ano 982.</p>
+              </div>
+              <div class="modal-header border-bottom-0 d-flex justify-content-center">
+                  <h1 id="Fim_passado" class="modal-title fs-5">O FIM</h1>
+              </div>
+              <div class="container">
+                <picture class="w-100">
+                  <img src="imagens\A Gruta do Tempo - 15.jpg" alt="Cavalo no pátio do castelo" class="img-fluid mw-100 rounded-bottom">
+                </picture>
+              </div>
+              <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+                  <div class="mb-2">
+                      <a href="#" class="w-100 d-block stop-music">
+                          <button type="button" class="btn btn-lg btn-secondary w-100">
+                              Voltar para o início.
+                          </button>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
     
 
     
